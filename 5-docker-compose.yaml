@@ -1,0 +1,12 @@
+# 通过 cli 构建运行 docker 不易维护
+# 例如 管理端口、存储、环境变量等
+
+
+# 使用 docker-compose.yml 翻译成配置文件更方便
+# 运行: docker-compose -f 5-docker-compose.yaml up --build
+version: '3'
+services:
+  app:
+    build: ./2-startup.Dockerfile
+    ports:
+      - "3000:3000"
